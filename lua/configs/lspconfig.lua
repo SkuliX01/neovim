@@ -16,6 +16,25 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+lspconfig.tsserver.setup({
+  on_attach = nvlsp.on_attach,
+  capabilities = nvlsp.capabilities
+})
+
+lspconfig.tailwindcss.setup({
+  on_attach = nvlsp.on_attach,
+  capabilities = nvlsp.capabilities,
+})
+
+lspconfig.gopls.setup({
+  on_attach = nvlsp.on_attach,
+  capabilities = nvlsp.capabilities
+})
+
+lspconfig.eslint.setup({
+  on_attach = nvlsp.on_attach,
+  capabilities = nvlsp.capabilities,
+})
 -- configuring single server, example: typescript
 -- lspconfig.ts_ls.setup {
 --   on_attach = nvlsp.on_attach,
